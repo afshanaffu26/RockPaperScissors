@@ -39,6 +39,10 @@
             android:name="com.example.rockpaperscissors.ModesActivity"
             android:label="@string/title_activity_modes" >
         </activity>
+        <activity
+            android:name="com.example.rockpaperscissors.SettingsActivity"
+            android:label="@string/title_activity_settings" >
+        </activity>
     </application>
 
 </manifest>
