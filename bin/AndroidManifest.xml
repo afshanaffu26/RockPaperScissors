@@ -51,6 +51,10 @@
             android:name="com.example.rockpaperscissors.MainActivity"
             android:label="@string/title_activity_main" >
         </activity>
+        <activity
+            android:name="com.example.rockpaperscissors.RulesActivity"
+            android:label="@string/title_activity_rules" >
+        </activity>
     </application>
 
 </manifest>
