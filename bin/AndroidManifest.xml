@@ -35,6 +35,10 @@
             android:name="com.example.rockpaperscissors.SigninActivity"
             android:label="@string/title_activity_signin" >
         </activity>
+        <activity
+            android:name="com.example.rockpaperscissors.ModesActivity"
+            android:label="@string/title_activity_modes" >
+        </activity>
     </application>
 
 </manifest>

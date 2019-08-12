@@ -7,5 +7,6 @@
     <string name="App_Title">Rock Paper Scissors</string>
     <string name="title_activity_signup">SignupActivity</string>
     <string name="title_activity_signin">SigninActivity</string>
+    <string name="title_activity_modes">ModesActivity</string>
 
 </resources>
