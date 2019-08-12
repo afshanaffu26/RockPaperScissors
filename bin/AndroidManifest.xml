@@ -47,6 +47,10 @@
             android:name="com.example.rockpaperscissors.ScoresActivity"
             android:label="@string/title_activity_scores" >
         </activity>
+        <activity
+            android:name="com.example.rockpaperscissors.MainActivity"
+            android:label="@string/title_activity_main" >
+        </activity>
     </application>
 
 </manifest>

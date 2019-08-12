@@ -10,5 +10,6 @@
     <string name="title_activity_modes">ModesActivity</string>
     <string name="title_activity_settings">SettingsActivity</string>
     <string name="title_activity_scores">ScoresActivity</string>
+    <string name="title_activity_main">MainActivity</string>
 
 </resources>
