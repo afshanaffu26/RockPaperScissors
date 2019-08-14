@@ -44,9 +44,9 @@ public final class R {
         public static final int play=0x7f07000b;
         public static final int relativeLayout1=0x7f070012;
         public static final int rock=0x7f070002;
-        public static final int rules=0x7f07000c;
+        public static final int rules=0x7f07000a;
         public static final int scissors=0x7f070004;
-        public static final int scores=0x7f07000a;
+        public static final int scores=0x7f07000c;
         public static final int seekBar1=0x7f070014;
         public static final int signin=0x7f070017;
         public static final int textView1=0x7f070001;

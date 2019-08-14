@@ -1,14 +1,11 @@
 package com.example.rockpaperscissors;
 
-import com.example.rockpaperscissors.Outlet.Option;
-
 import android.os.Bundle;
 import android.app.Activity;
 import android.content.Intent;
 import android.view.Menu;
 import android.view.View;
 import android.widget.Button;
-import android.widget.ImageView;
 
 public class SigninActivity extends Activity implements android.view.View.OnClickListener {
 
@@ -29,11 +26,11 @@ public class SigninActivity extends Activity implements android.view.View.OnClic
 
 	@Override
 	public void onClick(View v) {
-				  switch (v.getId()) {
-				  case R.id.signin :
-					   Intent i = new Intent(SigninActivity.this, MainActivity.class);
-					    startActivity(i); 
-					    break;
+		switch (v.getId()) {
+			 case R.id.signin :
+				 Intent i = new Intent(SigninActivity.this, MainActivity.class);
+				 startActivity(i); 
+				break;
 				  }
 	}
 
