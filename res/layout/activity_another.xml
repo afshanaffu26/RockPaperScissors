@@ -23,7 +23,7 @@
      android:layout_alignParentLeft="true"
      android:layout_marginBottom="94dp"
      android:layout_marginLeft="20dp"
-     android:background="@drawable/rock" />
+     android:background="@drawable/images" />
 
  <Button
      android:id="@+id/paper"
@@ -32,7 +32,7 @@
      android:layout_alignBaseline="@+id/rock"
      android:layout_alignBottom="@+id/rock"
      android:layout_centerHorizontal="true"
-     android:background="@drawable/paper" />
+     android:background="@drawable/images" />
 
  <Button
      android:id="@+id/scissors"
@@ -42,7 +42,7 @@
      android:layout_alignBottom="@+id/paper"
      android:layout_alignParentRight="true"
      android:layout_marginRight="16dp"
-     android:background="@drawable/scissors" />
+     android:background="@drawable/images" />
 
  <ImageButton
      android:id="@+id/imageButtonHome"
