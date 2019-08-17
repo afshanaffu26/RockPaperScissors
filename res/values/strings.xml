@@ -12,5 +12,6 @@
     <string name="title_activity_scores">ScoresActivity</string>
     <string name="title_activity_main">MainActivity</string>
     <string name="title_activity_rules">RulesActivity</string>
+    <string name="title_activity_classic_game">ClassicGameActivity</string>
 
 </resources>

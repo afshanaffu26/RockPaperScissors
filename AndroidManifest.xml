@@ -55,6 +55,10 @@
             android:name="com.example.rockpaperscissors.RulesActivity"
             android:label="@string/title_activity_rules" >
         </activity>
+        <activity
+            android:name="com.example.rockpaperscissors.ClassicGameActivity"
+            android:label="@string/title_activity_classic_game" >
+        </activity>
     </application>
 
 </manifest>
