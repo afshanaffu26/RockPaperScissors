@@ -28,7 +28,7 @@
             android:windowSoftInputMode="adjustResize|stateVisible" >
         </activity>
         <activity
-            android:name="com.example.rockpaperscissors.SignupActivity"
+            android:name="com.example.rockpaperscissors.SignUpActivity"
             android:label="@string/title_activity_signup" >
         </activity>
         <activity
