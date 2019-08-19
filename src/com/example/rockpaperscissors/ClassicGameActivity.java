@@ -61,9 +61,59 @@ public class ClassicGameActivity extends Activity implements OnClickListener {
     public void onClick(View v) {
         // TODO Auto-generated method stub
 
-       
+        ImageView imageView = (ImageView) findViewById(R.id.user);
+
+        boolean play = true;
+
+        switch (v.getId()) {
+            case R.id.rock:
+                userSelection = Option.ROCK;
+                imageView.setImageResource(R.drawable.rock);
+                break;
+            case R.id.paper:
+                userSelection = Option.PAPER;
+                imageView.setImageResource(R.drawable.paper);
+                break;
+            case R.id.scissors:
+                userSelection = Option.SCISSORS;
+                imageView.setImageResource(R.drawable.scissors);
+                break;
+
+            case R.id.imageButtonHome:
+                Intent i = new Intent(ClassicGameActivity.this, HomePageActivity.class);
+                startActivity(i); // To go home.
+                play = false;
+                finish();
+                break;
+
+        }
+
+
+
+
+        if (play) {
+            play();
+            if (uc == 10 || ac == 10)
+                showResults();
+        }
     }
 
-   
+    private void showResults() {
+        
+    }
+
+    private void play() {
+        
+    }
+
+
+    @Override
+    public void onBackPressed() {
+        moveTaskToBack(true);
+        Intent back = new Intent(ClassicGameActivity.this, HomePageActivity.class);
+        startActivity(back);
+        finish();
+
+    }
 
 }
