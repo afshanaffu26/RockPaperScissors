@@ -4,6 +4,7 @@ package com.example.rockpaperscissors;
 import android.os.Bundle;
 import android.app.Activity;
 import android.content.ContentValues;
+import android.database.SQLException;
 import android.database.sqlite.SQLiteDatabase;
 import android.text.Editable;
 import android.view.Menu;
@@ -49,10 +50,17 @@ public class SignUpActivity extends Activity implements OnClickListener {
 		String password = passwordInput.getText().toString();
 		String reEnterPassword = reEnterPasswordInput.getText().toString();
 		if(password.equals(reEnterPassword)){
+			try{
 			cv.put("name", name);
 			cv.put("username", username);
 			cv.put("password", password);
 			db.insert("userDetails", null, cv);
+			}catch (SQLException e) {
+				Toast.makeText(getApplicationContext(), "We are unable to process the request now. Please try again later or with a different username." , Toast.LENGTH_LONG).show();
+			}finally{
+				db.close();
+			}
+			Toast.makeText(getApplicationContext(), "User signup succesful" , Toast.LENGTH_LONG).show();
 			
 		}else{
 			Toast.makeText(getApplicationContext(),"Your passwords doesn't match",Toast.LENGTH_SHORT).show();

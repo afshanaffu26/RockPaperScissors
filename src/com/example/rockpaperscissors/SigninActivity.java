@@ -19,6 +19,7 @@ public class SigninActivity extends Activity implements OnClickListener {
     static SQLiteDatabase db = null;
     EditText usernameInput, passwordInput;
     TextView signupText;
+    Cursor res;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -56,21 +57,24 @@ public class SigninActivity extends Activity implements OnClickListener {
 			try{
 			String username = usernameInput.getText().toString();
 			String userPassword = passwordInput.getText().toString();
-	        Cursor res = db.rawQuery("select * from userDetails where username='"+username+"'", null);
+	        res = db.rawQuery("select * from userDetails where username='"+username+"'", null);
 	        if (res.moveToFirst()) {
 	            String passwordStored = res.getString(res.getColumnIndex("password"));
 	            if (userPassword.equals(passwordStored)) {
 	                Intent j = new Intent(SigninActivity.this, HomePageActivity.class);
 	                startActivity(j);
 	            } else {
-	                Toast.makeText(getApplicationContext(), "Username/Password combination entered is incorrect. Please try again.", Toast.LENGTH_SHORT).show();
+	                Toast.makeText(getApplicationContext(), "Username/Password combination entered is incorrect. Please try again.", Toast.LENGTH_LONG).show();
 	            }
 	        } else {
-	            Toast.makeText(getApplicationContext(), "Seems like you are not a user yet. Please sign up", Toast.LENGTH_SHORT).show();
+	            Toast.makeText(getApplicationContext(), "Seems like you are not a user yet. Please sign up", Toast.LENGTH_LONG).show();
 	        }
 			}catch(SQLException e){
 				
 				Toast.makeText(getApplicationContext(), "We are unable to process the request now. Please try again later." , Toast.LENGTH_LONG).show();
+			}finally{
+				res.close();
+				db.close();
 			}
 			
 			break;
