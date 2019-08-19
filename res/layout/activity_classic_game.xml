@@ -17,32 +17,31 @@
 
  <Button
      android:id="@+id/rock"
-     android:layout_width="wrap_content"
-     android:layout_height="wrap_content"
+     android:layout_width="60dp"
+     android:layout_height="60dp"
      android:layout_alignParentBottom="true"
      android:layout_alignParentLeft="true"
      android:layout_marginBottom="94dp"
      android:layout_marginLeft="20dp"
-     android:background="@drawable/images" />
+     android:background="@drawable/rock" />
 
  <Button
      android:id="@+id/paper"
-     android:layout_width="wrap_content"
-     android:layout_height="wrap_content"
-     android:layout_alignBaseline="@+id/rock"
+     android:layout_width="60dp"
+     android:layout_height="60dp"
      android:layout_alignBottom="@+id/rock"
      android:layout_centerHorizontal="true"
-     android:background="@drawable/images" />
+     android:background="@drawable/paper" />
 
  <Button
      android:id="@+id/scissors"
-     android:layout_width="wrap_content"
-     android:layout_height="wrap_content"
+     android:layout_width="60dp"
+     android:layout_height="60dp"
      android:layout_alignBaseline="@+id/paper"
      android:layout_alignBottom="@+id/paper"
      android:layout_alignParentRight="true"
      android:layout_marginRight="16dp"
-     android:background="@drawable/images" />
+     android:background="@drawable/scissors" />
 
  <ImageButton
      android:id="@+id/imageButtonHome"
