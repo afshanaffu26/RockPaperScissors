@@ -29,7 +29,7 @@ public class SignUpActivity extends Activity implements OnClickListener {
 		passwordInput = (EditText) findViewById(R.id.passwordInput);
 		reEnterPasswordInput = (EditText) findViewById(R.id.reEnterPasswordInput);
 		signupBtn = (Button) findViewById(R.id.signup);
-		DbHelper dbh=new DbHelper(this, "score.db", null, 1);
+		DbHelper dbh=new DbHelper(this, "game.db", null, 1);
 		db=dbh.getWritableDatabase();
 		signupBtn.setOnClickListener(this);
 	}
@@ -57,8 +57,6 @@ public class SignUpActivity extends Activity implements OnClickListener {
 			db.insert("userDetails", null, cv);
 			}catch (SQLException e) {
 				Toast.makeText(getApplicationContext(), "We are unable to process the request now. Please try again later or with a different username." , Toast.LENGTH_LONG).show();
-			}finally{
-				db.close();
 			}
 			Toast.makeText(getApplicationContext(), "User signup succesful" , Toast.LENGTH_LONG).show();
 			
