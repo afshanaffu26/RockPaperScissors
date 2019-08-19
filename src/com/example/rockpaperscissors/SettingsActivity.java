@@ -10,12 +10,13 @@ import android.widget.SeekBar.OnSeekBarChangeListener;
 
 public class SettingsActivity extends Activity implements OnSeekBarChangeListener {
 	
-	AudioManager audioManager = (AudioManager) getSystemService(Context.AUDIO_SERVICE);
+	AudioManager audioManager ;
 
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.activity_settings);
+		audioManager = (AudioManager) getSystemService(Context.AUDIO_SERVICE);
 		SeekBar volumeSlider = (SeekBar) findViewById(R.id.volumeSlider);
 		volumeSlider.setMax(audioManager.getStreamMaxVolume(AudioManager.STREAM_MUSIC));
 		volumeSlider.setProgress(audioManager.getStreamVolume(AudioManager.STREAM_MUSIC)); 
