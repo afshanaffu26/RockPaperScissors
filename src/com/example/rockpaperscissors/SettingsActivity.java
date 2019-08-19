@@ -20,6 +20,7 @@ public class SettingsActivity extends Activity implements OnSeekBarChangeListene
 	TextView edit;
 	TextView roundNumber;
 	Button done;
+	String play_no_of_rounds;
 
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {

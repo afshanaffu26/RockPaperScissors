@@ -10,6 +10,7 @@ import android.app.AlertDialog;
 import android.content.ContentValues;
 import android.content.DialogInterface;
 import android.content.Intent;
+import android.database.Cursor;
 import android.database.SQLException;
 import android.database.sqlite.SQLiteDatabase;
 import android.view.Menu;
@@ -41,6 +42,7 @@ public class ClassicGameActivity extends Activity implements OnClickListener {
     int ac = 0;
     Button bt1, bt2, bt3;
     ImageButton bt4;
+    Cursor res;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -106,14 +108,23 @@ public class ClassicGameActivity extends Activity implements OnClickListener {
             public void onClick(DialogInterface dialog, int which) {
                 // Do nothing  
             	try{  
+            		String noOfWins = null;
             	if (ac < uc) { 
             	ContentValues cv=new ContentValues();
+            	ContentValues cv1=new ContentValues();
         		cv.put("name", SigninActivity.current_name);
         		cv.put("score", uc);
         		cv.put("username", SigninActivity.current_username);
         		db.insert("highscore", null, cv);
+        		res = db.rawQuery("select * from classicWins where username='"+SigninActivity.current_username+"'", null);
+    	        if (res.moveToFirst()) {
+    	             noOfWins = res.getString(res.getColumnIndex("classicwins"));
             	}
-            	
+    	        cv1.put("classicwins", Integer.parseInt(noOfWins)+1);
+    	        cv1.put("username", SigninActivity.current_username);
+    	        db.insert("classicWins", null, cv1);
+    	        Toast.makeText(getApplicationContext(), "Your scores are submitted successfully", Toast.LENGTH_LONG).show();
+            	}
                 ImageView imageView = (ImageView) findViewById(R.id.user);
                 ImageView imageView1 = (ImageView) findViewById(R.id.android);
                 imageView.setImageResource(R.drawable.images);
@@ -127,7 +138,7 @@ public class ClassicGameActivity extends Activity implements OnClickListener {
             	}catch (SQLException e) {
             		Toast.makeText(getApplicationContext(), "Couldn't submit your scores. Please try again.", Toast.LENGTH_LONG).show();
 				}
-                Toast.makeText(getApplicationContext(), "Your scores are submitted successfully", Toast.LENGTH_LONG).show();
+                
             }
         });
         if (ac < uc) { 

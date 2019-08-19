@@ -42,7 +42,7 @@ public final class R {
         public static final int classicRules=0x7f08001e;
         public static final int done=0x7f080023;
         public static final int edit=0x7f080024;
-        public static final int imageButtonHome=0x7f08000f;
+        public static final int imageButtonHome=0x7f08000e;
         public static final int imageView1=0x7f080013;
         public static final int imageView2=0x7f080017;
         public static final int menu_forgot_password=0x7f080030;
@@ -51,15 +51,15 @@ public final class R {
         public static final int modes_classicBtn=0x7f080019;
         public static final int nameInput=0x7f08002d;
         public static final int numberOfRounds=0x7f080025;
-        public static final int paper=0x7f08000d;
+        public static final int paper=0x7f08000c;
         public static final int passwordInput=0x7f08002a;
         public static final int play=0x7f080012;
         public static final int reEnterPasswordInput=0x7f08002b;
         public static final int res=0x7f080020;
-        public static final int rock=0x7f08000c;
+        public static final int rock=0x7f08000d;
         public static final int roundNumber=0x7f080022;
         public static final int rules=0x7f080014;
-        public static final int scissors=0x7f08000e;
+        public static final int scissors=0x7f08000f;
         public static final int scores=0x7f080015;
         public static final int setting=0x7f080016;
         public static final int signin_passwordInput=0x7f080026;

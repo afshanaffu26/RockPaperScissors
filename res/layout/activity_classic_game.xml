@@ -16,32 +16,12 @@
         android:textAppearance="?android:attr/textAppearanceLarge" />
 
  <Button
-     android:id="@+id/rock"
-     android:layout_width="60dp"
-     android:layout_height="60dp"
-     android:layout_alignParentBottom="true"
-     android:layout_alignParentLeft="true"
-     android:layout_marginBottom="94dp"
-     android:layout_marginLeft="20dp"
-     android:background="@drawable/rock" />
-
- <Button
      android:id="@+id/paper"
      android:layout_width="60dp"
      android:layout_height="60dp"
      android:layout_alignBottom="@+id/rock"
      android:layout_centerHorizontal="true"
      android:background="@drawable/paper" />
-
- <Button
-     android:id="@+id/scissors"
-     android:layout_width="60dp"
-     android:layout_height="60dp"
-     android:layout_alignBaseline="@+id/paper"
-     android:layout_alignBottom="@+id/paper"
-     android:layout_alignParentRight="true"
-     android:layout_marginRight="16dp"
-     android:background="@drawable/scissors" />
 
  <ImageButton
      android:id="@+id/imageButtonHome"
@@ -74,18 +54,37 @@
 
  <ImageView
      android:id="@+id/android"
-     android:layout_width="wrap_content"
-     android:layout_height="wrap_content"
+     android:layout_width="60dp"
+     android:layout_height="60dp"
      android:layout_alignRight="@+id/scissors"
      android:layout_centerVertical="true"
      android:src="@drawable/images" />
 
  <ImageView
      android:id="@+id/user"
-     android:layout_width="wrap_content"
-     android:layout_height="wrap_content"
+     android:layout_width="60dp"
+     android:layout_height="60dp"
      android:layout_alignLeft="@+id/rock"
      android:layout_centerVertical="true"
      android:src="@drawable/images" />
+
+ <Button
+     android:id="@+id/scissors"
+     android:layout_width="60dp"
+     android:layout_height="60dp"
+     android:layout_above="@+id/imageButtonHome"
+     android:layout_alignParentRight="true"
+     android:layout_marginRight="20dp"
+     android:background="@drawable/scissors" />
+
+ <Button
+     android:id="@+id/rock"
+     android:layout_width="60dp"
+     android:layout_height="60dp"
+     android:layout_alignParentLeft="true"
+     android:layout_below="@+id/user"
+     android:layout_marginLeft="17dp"
+     android:layout_marginTop="47dp"
+     android:background="@drawable/rock" />
 
 </RelativeLayout>
