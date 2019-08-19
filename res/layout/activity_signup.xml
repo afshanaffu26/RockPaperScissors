@@ -19,13 +19,13 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignParentLeft="true"
-        android:layout_below="@+id/editText3"
+        android:layout_below="@+id/passwordInput"
         android:layout_marginTop="20dp"
         android:text="Re-enter Password"
         android:textAppearance="?android:attr/textAppearanceMedium" />
 
     <EditText
-        android:id="@+id/editText4"
+        android:id="@+id/reEnterPasswordInput"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignParentLeft="true"
@@ -34,7 +34,7 @@
         android:inputType="textPassword" />
 
     <EditText
-        android:id="@+id/editText3"
+        android:id="@+id/passwordInput"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignParentLeft="true"
@@ -43,7 +43,7 @@
         android:inputType="textPassword" />
 
     <EditText
-        android:id="@+id/editText2"
+        android:id="@+id/usernameInput"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignParentLeft="true"
@@ -52,7 +52,7 @@
         android:inputType="textEmailAddress" />
 
     <EditText
-        android:id="@+id/editText1"
+        android:id="@+id/nameInput"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignParentLeft="true"
@@ -65,7 +65,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignParentLeft="true"
-        android:layout_below="@+id/editText1"
+        android:layout_below="@+id/nameInput"
         android:layout_marginTop="14dp"
         android:text="Username"
         android:textAppearance="?android:attr/textAppearanceMedium" />
@@ -75,16 +75,16 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignParentLeft="true"
-        android:layout_below="@+id/editText2"
+        android:layout_below="@+id/usernameInput"
         android:layout_marginTop="14dp"
         android:text="Password"
         android:textAppearance="?android:attr/textAppearanceMedium" />
 
     <Button
-        android:id="@+id/button1"
+        android:id="@+id/signup"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_below="@+id/editText4"
+        android:layout_below="@+id/reEnterPasswordInput"
         android:layout_marginLeft="14dp"
         android:layout_marginTop="39dp"
         android:layout_toRightOf="@+id/textView2"

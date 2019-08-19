@@ -15,7 +15,7 @@
         android:textAppearance="?android:attr/textAppearanceMedium" />
 
     <EditText
-        android:id="@+id/editText2"
+        android:id="@+id/signin_passwordInput"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignParentLeft="true"
@@ -24,7 +24,7 @@
         android:inputType="textPassword" />
 
     <EditText
-        android:id="@+id/editText1"
+        android:id="@+id/signin_usernameInput"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignParentLeft="true"
@@ -33,10 +33,10 @@
         android:inputType="textEmailAddress" />
 
     <Button
-        android:id="@+id/signin"
+        android:id="@+id/signin_signinBtn"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_below="@+id/editText2"
+        android:layout_below="@+id/signin_passwordInput"
         android:layout_marginLeft="18dp"
         android:layout_marginTop="33dp"
         android:layout_toRightOf="@+id/textView1"
@@ -63,10 +63,10 @@
         android:textAppearance="?android:attr/textAppearanceMedium" />
 
     <TextView
-        android:id="@+id/textView3"
+        android:id="@+id/signin_signupText"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_below="@+id/signin"
+        android:layout_below="@+id/signin_signinBtn"
         android:layout_marginTop="27dp"
         android:layout_toRightOf="@+id/textView1"
         android:text="Not a user?Sign up."
