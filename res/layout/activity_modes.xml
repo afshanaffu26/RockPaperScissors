@@ -63,15 +63,15 @@
             android:textAppearance="?android:attr/textAppearanceMedium" />
 
         <Button
-            android:id="@+id/button2"
+            android:id="@+id/modes_advancedBtn"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_alignLeft="@+id/button1"
+            android:layout_alignLeft="@+id/modes_classicBtn"
             android:layout_alignTop="@+id/textView2"
             android:text="Advanced" />
 
         <Button
-            android:id="@+id/button1"
+            android:id="@+id/modes_classicBtn"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_alignTop="@+id/textView1"
