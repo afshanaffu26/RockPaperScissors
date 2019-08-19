@@ -99,11 +99,86 @@ public class ClassicGameActivity extends Activity implements OnClickListener {
     }
 
     private void showResults() {
-        
+        AlertDialog.Builder builder = new AlertDialog.Builder(ClassicGameActivity.this);
+        builder.setCancelable(false);
+        builder.setPositiveButton("OK", new DialogInterface.OnClickListener() {
+            @Override
+            public void onClick(DialogInterface dialog, int which) {
+                // Do nothing  
+            	
+            	
+                ImageView imageView = (ImageView) findViewById(R.id.user);
+                ImageView imageView1 = (ImageView) findViewById(R.id.android);
+                imageView.setImageResource(R.drawable.images);
+                imageView1.setImageResource(R.drawable.images);
+                TextView userS = (TextView) findViewById(R.id.textView2);
+                TextView androidS = (TextView) findViewById(R.id.textView3);
+                userS.setText(String.valueOf("user score:" + uc));
+                androidS.setText(String.valueOf("Computer Score:" + ac));
+				uc = 0;
+                ac = 0;
+            	
+                Toast.makeText(getApplicationContext(), "Your scores are submitted successfully", Toast.LENGTH_LONG).show();
+            }
+        });
+       
+
+        // Sets the right message according to result.
+        if (ac > uc) {
+            builder.setMessage("You Loose!");
+        } else if (ac < uc) {
+            builder.setMessage("You Win! Want to submit your scores?");
+        } else if (ac == uc) {
+            builder.setMessage("It's a draw!");
+        }
+
+        AlertDialog alert = builder.create();
+        alert.show();
     }
 
     private void play() {
-        
+        // Generates a random play.
+        TextView userS = (TextView) findViewById(R.id.textView2);
+        TextView androidS = (TextView) findViewById(R.id.textView3);
+        Random random = new Random();
+        int rand = random.nextInt(3);
+        androidSelection = null;
+        ImageView imageView = (ImageView) findViewById(R.id.android);
+
+        // Sets the right image according to random selection.
+        switch (rand) {
+            case 0:
+                androidSelection = Option.ROCK;
+                imageView.setImageResource(R.drawable.rock);
+                break;
+            case 1:
+                androidSelection = Option.PAPER;
+                imageView.setImageResource(R.drawable.paper);
+                break;
+            case 2:
+                androidSelection = Option.SCISSORS;
+                imageView.setImageResource(R.drawable.scissors);
+                break;
+        }
+        // Determine game result according to user selection and Android selection.
+        if (androidSelection == userSelection) {
+            uc++;
+            ac++;
+        } else if (androidSelection == Option.ROCK && userSelection == Option.SCISSORS) {
+
+            ac++;
+        } else if (androidSelection == Option.PAPER && userSelection == Option.ROCK) {
+
+            ac++;
+        } else if (androidSelection == Option.SCISSORS && userSelection == Option.PAPER) {
+
+            ac++;
+        } else {
+
+            uc++;
+        }
+        userS.setText(String.valueOf("user score:" + uc));
+        androidS.setText(String.valueOf("Computer Score:" + ac));
     }
 
 
