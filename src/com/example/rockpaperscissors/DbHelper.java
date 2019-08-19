@@ -18,9 +18,11 @@ public class DbHelper extends SQLiteOpenHelper{
 	public void onCreate(SQLiteDatabase db) {
 		// TODO Auto-generated method stub
 		String highScoreCreateQuery="create table highscore(name text,score integer,username text, FOREIGN KEY(username) REFERENCES userDetails(username))";
-		String userDetailsCreatyeQuery = "create table userDetails(name text,username text PRIMARY KEY ,password text, classicwins integer DEFAULT 0)";
+		String userDetailsCreatyeQuery = "create table userDetails(name text,username text PRIMARY KEY ,password text)";
+		String ClassicWinsCreatyeQuery = "create table classicWins(classicwins integer DEFAULT 0, username text, FOREIGN KEY(username) REFERENCES userDetails(username))";
 		db.execSQL(userDetailsCreatyeQuery);
 		db.execSQL(highScoreCreateQuery);
+		db.execSQL(ClassicWinsCreatyeQuery);
 	}
 
 	@Override
@@ -28,8 +30,10 @@ public class DbHelper extends SQLiteOpenHelper{
 		// TODO Auto-generated method stub
 		String highScoreDropQuery="drop table highscore";
 		String userDetailsDropQuery="drop table userDetails";
+		String classicWinsDropQuery="drop table classicWins";
 		db.execSQL(highScoreDropQuery);
 		db.execSQL(userDetailsDropQuery);
+		db.execSQL(classicWinsDropQuery);
 	}
 
 }
