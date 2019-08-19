@@ -8,12 +8,12 @@ import android.view.View;
 import android.view.View.OnClickListener;
 import android.widget.Button;
 
-public class MainActivity extends Activity implements OnClickListener{
+public class HomePageActivity extends Activity implements OnClickListener{
 
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
-		setContentView(R.layout.activity_main);
+		setContentView(R.layout.activity_home_page);
 		Button playBtn = (Button) findViewById(R.id.play);
 		Button rulesBtn = (Button) findViewById(R.id.rules);
 		Button scoresBtn = (Button) findViewById(R.id.scores);
@@ -34,15 +34,15 @@ public class MainActivity extends Activity implements OnClickListener{
 		Intent i;
 		switch (v.getId()) {
 		case R.id.play:
-			 i = new Intent(MainActivity.this, ModesActivity.class);
+			 i = new Intent(HomePageActivity.this, ModesActivity.class);
 		    startActivity(i); 
 			break;
 		case R.id.rules:
-			 i = new Intent(MainActivity.this, RulesActivity.class);
+			 i = new Intent(HomePageActivity.this, RulesActivity.class);
 		    startActivity(i); 
 			break;
 		case R.id.scores:
-			 i = new Intent(MainActivity.this, ScoresActivity.class);
+			 i = new Intent(HomePageActivity.this, ScoresActivity.class);
 		    startActivity(i); 
 			break;
 
