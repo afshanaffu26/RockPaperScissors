@@ -105,7 +105,14 @@ public class ClassicGameActivity extends Activity implements OnClickListener {
             @Override
             public void onClick(DialogInterface dialog, int which) {
                 // Do nothing  
-            	
+            	try{  
+            	if (ac < uc) { 
+            	ContentValues cv=new ContentValues();
+        		cv.put("name", SigninActivity.current_name);
+        		cv.put("score", uc);
+        		cv.put("username", SigninActivity.current_username);
+        		db.insert("highscore", null, cv);
+            	}
             	
                 ImageView imageView = (ImageView) findViewById(R.id.user);
                 ImageView imageView1 = (ImageView) findViewById(R.id.android);
@@ -117,11 +124,27 @@ public class ClassicGameActivity extends Activity implements OnClickListener {
                 androidS.setText(String.valueOf("Computer Score:" + ac));
 				uc = 0;
                 ac = 0;
-            	
+            	}catch (SQLException e) {
+            		Toast.makeText(getApplicationContext(), "Couldn't submit your scores. Please try again.", Toast.LENGTH_LONG).show();
+				}
                 Toast.makeText(getApplicationContext(), "Your scores are submitted successfully", Toast.LENGTH_LONG).show();
             }
         });
-       
+        if (ac < uc) { 
+        builder.setNegativeButton("Cancel", new DialogInterface.OnClickListener() {
+
+			@Override
+			public void onClick(DialogInterface arg0, int arg1) {
+				// TODO Auto-generated method stub
+				Intent k=new Intent(ClassicGameActivity.this, HomePageActivity.class);
+				startActivity(k);
+				finish();
+				
+			}
+			
+			
+		});
+        }
 
         // Sets the right message according to result.
         if (ac > uc) {
