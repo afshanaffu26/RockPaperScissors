@@ -13,5 +13,6 @@
     <string name="title_activity_main">MainActivity</string>
     <string name="title_activity_rules">RulesActivity</string>
     <string name="title_activity_classic_game">ClassicGameActivity</string>
+    <string name="title_activity_advanced_game">AdvancedGameActivity</string>
 
 </resources>

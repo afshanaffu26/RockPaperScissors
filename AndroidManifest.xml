@@ -48,7 +48,7 @@
             android:label="@string/title_activity_scores" >
         </activity>
         <activity
-            android:name="com.example.rockpaperscissors.MainActivity"
+            android:name="com.example.rockpaperscissors.HomePageActivity"
             android:label="@string/title_activity_main" >
         </activity>
         <activity
@@ -58,6 +58,10 @@
         <activity
             android:name="com.example.rockpaperscissors.ClassicGameActivity"
             android:label="@string/title_activity_classic_game" >
+        </activity>
+        <activity
+            android:name="com.example.rockpaperscissors.AdvancedGameActivity"
+            android:label="@string/title_activity_advanced_game" >
         </activity>
     </application>
 
