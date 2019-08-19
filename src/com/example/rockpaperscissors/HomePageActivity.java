@@ -17,9 +17,11 @@ public class HomePageActivity extends Activity implements OnClickListener{
 		Button playBtn = (Button) findViewById(R.id.play);
 		Button rulesBtn = (Button) findViewById(R.id.rules);
 		Button scoresBtn = (Button) findViewById(R.id.scores);
+		Button settingsBtn = (Button) findViewById(R.id.setting);
 		playBtn.setOnClickListener(this);
 		rulesBtn.setOnClickListener(this);
 		scoresBtn.setOnClickListener(this);
+		settingsBtn.setOnClickListener(this);
 	}
 
 	@Override
@@ -43,6 +45,10 @@ public class HomePageActivity extends Activity implements OnClickListener{
 			break;
 		case R.id.scores:
 			 i = new Intent(HomePageActivity.this, ScoresActivity.class);
+		    startActivity(i); 
+			break;
+		case R.id.setting:
+			 i = new Intent(HomePageActivity.this, SettingsActivity.class);
 		    startActivity(i); 
 			break;
 

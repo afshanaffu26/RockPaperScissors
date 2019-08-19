@@ -46,6 +46,7 @@ public class RulesActivity extends Activity implements OnClickListener {
 	case R.id.advanced:
 		classicRules.setVisibility(View.INVISIBLE);
 		advancedRules.setVisibility(View.VISIBLE);
+		
 		break;
 
 		default:

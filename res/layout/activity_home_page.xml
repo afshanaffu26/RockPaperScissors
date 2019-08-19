@@ -5,24 +5,6 @@
     tools:context=".MainActivity" >
 
     <Button
-        android:id="@+id/rules"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignRight="@+id/play"
-        android:layout_below="@+id/play"
-        android:layout_marginTop="42dp"
-        android:text="Rules" />
-
-    <Button
-        android:id="@+id/scores"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignLeft="@+id/rules"
-        android:layout_below="@+id/rules"
-        android:layout_marginTop="52dp"
-        android:text="Scores" />
-
-    <Button
         android:id="@+id/play"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -39,5 +21,31 @@
         android:layout_centerHorizontal="true"
         android:layout_marginTop="36dp"
         android:src="@drawable/rps_classic" />
+
+    <Button
+        android:id="@+id/rules"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/play"
+        android:layout_centerVertical="true"
+        android:text="Rules" />
+
+    <Button
+        android:id="@+id/scores"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/rules"
+        android:layout_below="@+id/rules"
+        android:layout_marginTop="30dp"
+        android:text="Scores" />
+
+    <Button
+        android:id="@+id/setting"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/scores"
+        android:layout_below="@+id/scores"
+        android:layout_marginTop="19dp"
+        android:text="Settings" />
 
 </RelativeLayout>
