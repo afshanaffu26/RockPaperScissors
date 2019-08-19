@@ -108,7 +108,7 @@ public class ClassicGameActivity extends Activity implements OnClickListener {
             public void onClick(DialogInterface dialog, int which) {
                 // Do nothing  
             	try{  
-            		String noOfWins = null;
+            		int noOfWins = 0;
             	if (ac < uc) { 
             	ContentValues cv=new ContentValues();
             	ContentValues cv1=new ContentValues();
@@ -118,9 +118,9 @@ public class ClassicGameActivity extends Activity implements OnClickListener {
         		db.insert("highscore", null, cv);
         		res = db.rawQuery("select * from classicWins where username='"+SigninActivity.current_username+"'", null);
     	        if (res.moveToFirst()) {
-    	             noOfWins = res.getString(res.getColumnIndex("classicwins"));
+    	             noOfWins = Integer.parseInt(res.getString(res.getColumnIndex("classicwins")));
             	}
-    	        cv1.put("classicwins", Integer.parseInt(noOfWins)+1);
+    	        cv1.put("classicwins",(noOfWins)+1);
     	        cv1.put("username", SigninActivity.current_username);
     	        db.insert("classicWins", null, cv1);
     	        Toast.makeText(getApplicationContext(), "Your scores are submitted successfully", Toast.LENGTH_LONG).show();
