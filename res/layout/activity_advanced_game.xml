@@ -15,16 +15,6 @@
         android:text="ROCK PAPER SCISSORS "
         android:textAppearance="?android:attr/textAppearanceLarge" />
 
- <Button
-     android:id="@+id/advanced_rock"
-     android:layout_width="60dp"
-     android:layout_height="60dp"
-     android:layout_marginLeft="20dp"
-     android:layout_marginTop="350dp"
-     android:background="@drawable/rock"
-     android:height="60dp"
-     android:width="60dp" />
-
  <ImageView
      android:id="@+id/advanced_android"
      android:layout_width="60dp"
@@ -41,22 +31,6 @@
      android:layout_centerVertical="true"
      android:src="@drawable/images" />
 
- <Button
-     android:id="@+id/advanced_spock"
-     android:layout_width="60dp"
-     android:layout_height="60dp"
-     android:layout_below="@+id/advanced_paper"
-     android:layout_toLeftOf="@+id/advanced_scissors"
-     android:background="@drawable/spock" />
-
- <Button
-     android:id="@+id/advanced_lizard"
-     android:layout_width="60dp"
-     android:layout_height="60dp"
-     android:layout_below="@+id/advanced_paper"
-     android:layout_toLeftOf="@+id/advanced_paper"
-     android:background="@drawable/lizard" />
-
  <TextView
      android:id="@+id/textView2"
      android:layout_width="wrap_content"
@@ -67,25 +41,6 @@
      android:hint="user score"
      android:textAppearance="?android:attr/textAppearanceMedium" />
 
- <Button
-     android:id="@+id/advanced_paper"
-     android:layout_width="60dp"
-     android:layout_height="60dp"
-     android:layout_alignBaseline="@+id/advanced_rock"
-     android:layout_alignBottom="@+id/advanced_rock"
-     android:layout_centerHorizontal="true"
-     android:background="@drawable/paper" />
-
- <Button
-     android:id="@+id/advanced_scissors"
-     android:layout_width="60dp"
-     android:layout_height="60dp"
-     android:layout_alignBaseline="@+id/advanced_rock"
-     android:layout_alignBottom="@+id/advanced_rock"
-     android:layout_alignParentRight="true"
-     android:layout_marginRight="20dp"
-     android:background="@drawable/scissors" />
-
  <TextView
      android:id="@+id/textView3"
      android:layout_width="wrap_content"
@@ -95,5 +50,49 @@
      android:layout_alignRight="@+id/advanced_android"
      android:hint="android score"
      android:textAppearance="?android:attr/textAppearanceMedium" />
+
+ <Button
+     android:id="@+id/advanced_rock"
+     android:layout_width="60dp"
+     android:layout_height="60dp"
+     android:layout_alignLeft="@+id/textView2"
+     android:layout_below="@+id/advanced_user"
+     android:layout_marginTop="46dp"
+     android:background="@drawable/rock"
+     android:height="60dp"
+     android:width="60dp" />
+
+ <Button
+     android:id="@+id/advanced_lizard"
+     android:layout_width="60dp"
+     android:layout_height="60dp"
+     android:layout_below="@+id/advanced_rock"
+     android:layout_toLeftOf="@+id/advanced_paper"
+     android:background="@drawable/lizard" />
+
+ <Button
+     android:id="@+id/advanced_spock"
+     android:layout_width="60dp"
+     android:layout_height="60dp"
+     android:layout_below="@+id/advanced_rock"
+     android:layout_toLeftOf="@+id/advanced_scissors"
+     android:background="@drawable/spock" />
+
+ <Button
+     android:id="@+id/advanced_paper"
+     android:layout_width="60dp"
+     android:layout_height="60dp"
+     android:layout_above="@+id/advanced_lizard"
+     android:layout_centerHorizontal="true"
+     android:background="@drawable/paper" />
+
+ <Button
+     android:id="@+id/advanced_scissors"
+     android:layout_width="60dp"
+     android:layout_height="60dp"
+     android:layout_above="@+id/advanced_spock"
+     android:layout_alignParentRight="true"
+     android:layout_marginRight="20dp"
+     android:background="@drawable/scissors" />
 
 </RelativeLayout>
