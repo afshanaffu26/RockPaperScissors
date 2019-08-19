@@ -6,19 +6,26 @@ import android.content.Intent;
 import android.view.Menu;
 import android.view.View;
 import android.view.View.OnClickListener;
+import android.widget.Button;
 import android.widget.TextView;
 
 public class RulesActivity extends Activity implements OnClickListener {
 	
-	TextView classicRules = (TextView) findViewById(R.id.classicRules);
-	TextView advancedRules = (TextView) findViewById(R.id.advancedRules);
+	TextView classicRules;
+	TextView advancedRules;
 
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.activity_rules);
+		classicRules = (TextView) findViewById(R.id.classicRules);
+		advancedRules = (TextView) findViewById(R.id.advancedRules);
 		advancedRules.setVisibility(View.INVISIBLE);
 		classicRules.setVisibility(View.VISIBLE);
+		Button classicBtn = (Button) findViewById(R.id.classic);
+		Button advancedBtn = (Button) findViewById(R.id.advanced);
+		classicBtn.setOnClickListener(this);
+		advancedBtn.setOnClickListener(this);
 	}
 
 	@Override
