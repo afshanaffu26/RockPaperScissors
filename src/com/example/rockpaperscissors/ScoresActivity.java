@@ -35,7 +35,25 @@ public class ScoresActivity extends Activity implements OnClickListener{
 		{
 			do
 			{
+				TableRow tr=new TableRow(getApplicationContext());
+				TextView t1=new TextView(getApplicationContext());
+				TextView t2=new TextView(getApplicationContext());
 				
+				
+				String ename=res.getString(res.getColumnIndex("name"));;
+				int escore=res.getInt(res.getColumnIndex("score"));
+				t1.setText(ename+"      ");
+				t2.setText(escore+"");
+				
+				t1.setTextColor(Color.BLACK);
+				t2.setTextColor(Color.BLACK);
+				
+				tr.addView(t1);
+				tr.addView(t2);
+				
+				t.addView(tr);
+				
+				count++;
 			}
 			while(res.moveToNext()&&count<5);
 			count=0;
