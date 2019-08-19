@@ -17,6 +17,7 @@ import android.widget.Toast;
 public class SigninActivity extends Activity implements OnClickListener {
 
     static SQLiteDatabase db = null;
+    public static String current_username, current_name;
     EditText usernameInput, passwordInput;
     TextView signupText;
     Cursor res;
@@ -25,7 +26,7 @@ public class SigninActivity extends Activity implements OnClickListener {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_signin);
-        DbHelper dbh = new DbHelper(this, "score.db", null, 1);
+        DbHelper dbh = new DbHelper(this, "game.db", null, 1);
         db = dbh.getWritableDatabase();
         usernameInput = (EditText) findViewById(R.id.signin_usernameInput);
         passwordInput = (EditText) findViewById(R.id.signin_passwordInput);
@@ -60,21 +61,26 @@ public class SigninActivity extends Activity implements OnClickListener {
 	        res = db.rawQuery("select * from userDetails where username='"+username+"'", null);
 	        if (res.moveToFirst()) {
 	            String passwordStored = res.getString(res.getColumnIndex("password"));
+	            String nameStored = res.getString(res.getColumnIndex("name"));
 	            if (userPassword.equals(passwordStored)) {
+	            	current_username = username;
+	            	current_name = nameStored;
 	                Intent j = new Intent(SigninActivity.this, HomePageActivity.class);
 	                startActivity(j);
 	            } else {
+	            	current_username = "";
+	            	current_name = "";
 	                Toast.makeText(getApplicationContext(), "Username/Password combination entered is incorrect. Please try again.", Toast.LENGTH_LONG).show();
 	            }
 	        } else {
+	        	current_username = "";
+	        	current_name = "";
 	            Toast.makeText(getApplicationContext(), "Seems like you are not a user yet. Please sign up", Toast.LENGTH_LONG).show();
 	        }
 			}catch(SQLException e){
-				
+				current_username = "";
+				current_name = "";
 				Toast.makeText(getApplicationContext(), "We are unable to process the request now. Please try again later." , Toast.LENGTH_LONG).show();
-			}finally{
-				res.close();
-				db.close();
 			}
 			
 			break;
